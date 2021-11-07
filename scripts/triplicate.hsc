@@ -1,11 +1,6 @@
 ;terminal train of death
 ;-------------------------------------------------------------------------------
-(script startup triplicate	
-    (sleep 400)
-    (mp_wake_script train_of_death)
-)
-
-(script dormant train_of_death
+(script continuous train_of_death
 
 	(object_destroy eastbound_train)
 	
@@ -18,13 +13,14 @@
 		(begin
 		
 			(object_create eastbound_train)
-			
+;			(cinematic_light_object_off eastbound_train)
+
 		)
 		
 		(begin
 		
 			(object_create westbound_train)
-		
+;			(cinematic_light_object_off westbound_train)
 		)
 
 	)
